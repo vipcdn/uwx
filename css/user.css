@@ -1,0 +1,236 @@
+
+
+.user_details_main .container {
+    background: none;
+    padding: 0
+}
+
+.user_details_main .hd {
+    background: #fff;
+    padding-bottom: 20px;
+    /*margin-top: 15px*/
+}
+
+.user_details_main .hd .title {
+    font-size: 16px
+}
+
+.user_details_main .hd .title b {
+    font-size: 30px;
+    margin-right: 5px
+}
+
+.user_details_main .hd .operate {
+    margin-bottom: 15px
+}
+
+.user_details_main .hd .left-img {
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.user_details_main .hd .left-img img {
+    max-width: 100%;
+    height: 100px;
+    padding: 2px;
+    border: 1px solid #ddd
+}
+
+.user_details_main .hd .right-txt .list {
+    margin-bottom: 0
+}
+
+.user_details_main .hd .right-txt li {
+    float: left;
+    width: 30.33%;
+    line-height: 36px;
+    font-size: 12px
+}
+
+.user_details_main .bd .dynamic .item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 12px
+}
+
+.user_details_main .bd .dynamic .item.new {
+    color: #666
+}
+
+.user_details_main .bd .dynamic .item.new .pass-notice em {
+    color: #c54242
+}
+
+.user_details_main .bd .dynamic .item.old {
+    color: #aaa
+}
+
+.user_details_main .bd .dynamic .item.old a {
+    color: #aaa
+}
+
+.user_details_main .bd .dynamic .item.old a:hover {
+    color: #c54242
+}
+
+.user_details_main .bd .dynamic .item .poster-content {
+    max-width: 330px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    color: #2384cc
+}
+
+.user_details_main .bd .dynamic .item .poster-content:hover {
+    color: #c54242
+}
+
+.user_details_main .bd .dynamic .item .reposter-content {
+    display: block;
+    word-break: break-all
+}
+
+.user_details_main .bd .dynamic .item .re-content {
+    background: #f1f9f7;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    position: relative
+}
+
+.user_details_main .bd .dynamic .item .re-content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 15px solid #f1f9f7;
+    top: -18px;
+    left: 5px;
+    transform: rotateZ(-15deg)
+}
+
+.user_details_main .bd .dynamic .item .date {
+    font-size: 12px
+}
+
+.user_details_main .bd .dynamic .item .pass-notice {
+    margin-bottom: 10px
+}
+
+.user_details_main .bd .dynamic .item .pass-notice a {
+    text-decoration: underline
+}
+
+.user_details_main .bd .right-bar {
+    padding-left: 0;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.user_details_main .bd .put .item {
+    font-size: 12px;
+    line-height: 24px
+}
+
+.user_details_main .bd .put .item a {
+    display: inline-block;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.user_details_main .bd .put .item em {
+    color: #666;
+    float: right
+}
+
+.user_details_main .shadow-card {
+
+    padding: 20px 20px;
+    margin-bottom: 20px;
+}
+
+.user_details_main .shadow-card .content {
+    padding-top: 15px
+}
+
+@media (max-width:768px ) {
+    .user_details_main .hd {
+        margin: 0 -10px;
+    }
+    .user_details_main .col-sm-12 {
+        padding: 0;
+    }
+    .user_details_main .hd .left-img {
+        width: 50%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .user_details_main .hd .left-img img {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        border: 1px solid #ddd;
+    }
+
+    .user_details_main .right-txt {
+        padding: 0;
+    }
+
+    .user_details_main .hd .right-txt li {
+        float: left;
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 25px;
+    }
+
+    .user_details_main .page-num.count-right .content {
+        float: none;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .user_details_main .shadow-card {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .modifyprofile_main .container{
+        padding: 15px 10px !important;
+    }
+}
+.modifyprofile_main .signature_ipt {
+    width: 500px
+}
+
+.modifyprofile_main .avatar_ipt {
+    display: inline-block
+}
+
+.modifyprofile_main .back_wrap {
+    margin-bottom: 10px
+}
+.modifyprofile_main .btn{
+    padding: 3px 10px;
+    border:1px solid #929292 ;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.modifyprofile_main .form-control{
+    line-height: 26px;
+}
+.modifyprofile_main .form-group{
+    margin-bottom: 10px;
+}
+.form-group p{margin-top:5px;}
+.form-group span{width:90px; display:inline-block; text-align:right;}
