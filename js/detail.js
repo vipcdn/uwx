@@ -6,7 +6,7 @@ $(function(){
 			success:function(msg){Player(msg);}			
 		});
 		
-	$('#topFav').load('/dh/top/top'+c+'.html');
+	$('#topFav').load('/H/'+c+'/right_hot.html');
 	$(document).contextmenu(function() {return false;});	
 	//判断是否已赞
 	var text = $('#fabulous').find('em').text();	
