@@ -1,14 +1,5 @@
-function iswq() {
-    //return true;
-    var a = window.navigator.userAgent.toLowerCase();
-    if (a.indexOf("micromessenger") > -1 || a.indexOf("qq/") > -1 || a.indexOf("mqqbrowser") > -1) {
-        return true;
-    } else {
-        return false;
-    }
-}
 //声明一些初始数据
-var iswq = iswq(), host = location.host, pathname = location.pathname, search = location.search, ids = "", aid = "", sid = "", mid = "", rp0 = "", rp1 = "", backData = '';
+var  host = location.host, pathname = location.pathname, search = location.search, ids = "", aid = "", sid = "", mid = "", rp0 = "", rp1 = "", backData = '';
 
 //声明是否主站以及本站域名名字、主站域名名字、副站域名名字
 var isms = 1, hostname = 'uwuxiu', mshostname = 'uwuxiu', wxhostname = 'uwuxiu', sitename = '尤物秀';
@@ -59,9 +50,8 @@ function slideNavAutoPosition(wrapperClass) {
         return sum;
     }
 }
-
+setCookie("vid", vid);
 var token = getCookie("uwx_token");
-
 if(isEmpty(token)){
 	$("#header_login").css('display','none');
 	$("#header_Notlogin").css('display','block');
@@ -171,10 +161,7 @@ var gwc = {
    
 };
 /*==================公共事件 start=====================*/
-//防止网站被框
-if (window != top) {
-    top.location.href = window.location.href;
-}
+
 //页面滚动事件
 var u = window.navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
@@ -308,7 +295,15 @@ $('.wap-nav .iconfont').click(function () {
 		var value = document.cookie.substring(start + prefix.length, end)
 		return unescape(value);
 	}
-	
+
+
+//创建cookie
+    function setCookie(name, value) {
+        var exp = new Date();
+        //exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+        document.cookie = name + "=" + encodeURIComponent(value) +";path=/";
+        return true;
+    };	
 //
 function isEmpty(obj){
     if(typeof obj == "undefined" || obj == null || obj == ""){
