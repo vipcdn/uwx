@@ -50,7 +50,7 @@ function slideNavAutoPosition(wrapperClass) {
         return sum;
     }
 }
-setCookie("vid", vid);
+if(typeof vid!=="undefined"){setCookie("vid", vid);}
 var token = getCookie("uwx_token");
 if(isEmpty(token)){
 	$("#header_login").css('display','none');
