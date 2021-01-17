@@ -865,6 +865,7 @@
     font-size: 24px;
     height: 40px;
     line-height: 40px;
+    font-weight: normal;
 }
 
 .movie_details_main .title_line a {
