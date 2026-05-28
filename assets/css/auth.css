@@ -1,0 +1,201 @@
+@import url('common.css');
+
+body {
+    background: linear-gradient(135deg, #87CEEB 0%, #5B9BD5 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #87CEEB 0%, #5B9BD5 100%);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 155, 213, 0.4);
+}
+
+.login-link, .register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a, .register-link a {
+    color: #5B9BD5;
+    text-decoration: none;
+}
+
+.verification-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.verification-info p {
+    margin: 5px 0;
+}
+
+.verification-info strong {
+    color: #5B9BD5;
+}
+
+.btn-secondary {
+    background: #6c757d !important;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+/* 用户协议模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#agreementContent {
+    line-height: 1.8;
+    color: #333;
+}
+
+#agreementContent h1 {
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#agreementContent h2 {
+    color: #34495e;
+    margin-top: 30px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+#agreementContent h3 {
+    color: #555;
+    margin-top: 20px;
+}
+
+#agreementContent p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+#agreementContent ul,
+#agreementContent ol {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+#agreementContent li {
+    margin: 8px 0;
+}
+
+/* 协议复选框样式 */
+input[type="checkbox"] {
+    width: auto !important;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.agreement-link {
+    color: #5B9BD5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.agreement-link:hover {
+    color: #4a8fc4;
+}
+
