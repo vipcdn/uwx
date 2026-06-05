@@ -15,7 +15,7 @@ body {
     zoom: 1
 }
 
-header:after, main:after, footer-common:after, section:after, nav:after, aside:after, figure:after, ul:after, li:after, div:after, p:after, h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, dl:after, dt:after, dd:after {
+header:after, main:after, .footer-common:after, section:after, nav:after, aside:after, figure:after, ul:after, li:after, div:after, p:after, h1:after, h2:after, h3:after, h4:after, h5:after, h6:after, dl:after, dt:after, dd:after {
     content: '';
     display: block;
     clear: both
@@ -52,11 +52,8 @@ a:hover .fa {
     color: #c54242
 }
 
-a:hover.red {
-    /*color: #fff*/
-}
 
-a:hover.red:hover {
+a.red:hover {
     text-decoration: underline
 }
 
@@ -64,7 +61,7 @@ a:hover.blue {
     color: #00a1d6
 }
 
-a:hover.blue:hover {
+a.blue:hover {
     color: #c54242;
     text-decoration: underline
 }
@@ -734,10 +731,6 @@ i, em {
     width: 24.5%;
 }
 
-
-.new-movie-box {
-
-}
 
 .new-movie-box .title-wrap {
     margin-bottom: 20px;
@@ -1933,7 +1926,7 @@ i, em {
         height: 45px;
         width: 70%;
         font-size: 0;
-        padding-right: 5px;
+        padding-right: 0px;
     }
     .operate-bar>div a em {
         display: none;
@@ -2747,8 +2740,7 @@ a.today_up:hover .fa {
 .pages > a, .pages > span {
     margin-left: 5px;
 }
-.pages a, .pages span {
-}
+
 .pages span.current-page {
     background-color: #5986d0;
     color: #fff;
@@ -2878,3 +2870,55 @@ a.today_up:hover .fa {
     left: 150%;
   }
 }
+
+/* 1. 强制让头像和消息图标在同一水平线上，并且不撑开高度 */
+  .operate-bar, .vip-wrap {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important; /* 垂直居中对齐 */
+  }
+
+  /* 2. 消息外层盒子 */
+  .vip-wrap .message-box {
+    position: relative !important;
+    display: inline-block !important;
+    margin-right: 15px; /* 调整它和右侧头像/登录按钮的间距 */
+    line-height: 1 !important; /* 消除原有行高对它的垂直位置干扰 */
+    vertical-align: middle !important;
+  }
+
+  /* 3. 消息图标链接 */
+  .vip-wrap .msg-btn {
+    display: block !important;
+    color: #666; /* 图标颜色，如果是深色背景可以改为 #ccc 或 #fff */
+    text-decoration: none !important;
+    line-height: 1 !important;
+  }
+  .vip-wrap .msg-btn:hover {
+    color: #ff3366; /* 鼠标悬停时的颜色 */
+  }
+
+  /* 4. 核心：控制图标字体大小（必须显式指定，防止继承错乱） */
+  .vip-wrap .msg-btn .iconfont {
+    font-size: 24px !important; 
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+
+  /* 5. 绝对定位红点：只相对于 message-box 定位，绝不撑大外层 */
+  .vip-wrap .msg-badge {
+    position: absolute !important;
+    top: -2px;      /* 往上微调红点位置 */
+    right: -3px;    /* 往右微调红点位置 */
+    width: 8px;     /* 红点大小 */
+    height: 8px;
+    background-color: #ff3b30 !important; /* 消息红 */
+    border-radius: 50% !important;
+    border: 1px solid #1f2d3d; /* 这里的颜色最好改成你导航栏背景的深色，红点才更精致 */
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
